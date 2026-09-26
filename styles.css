@@ -1,0 +1,259 @@
+/* HOJA DE ESTILOS - Registro de Clientes */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f7 0%, #dbe6f0 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.contenedor {
+  background: #ffffff;
+  width: 100%;
+  max-width: 560px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 30px 35px 35px;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #1d4e89;
+  padding-bottom: 15px;
+}
+
+.encabezado h1 {
+  margin: 0 0 6px;
+  color: #1d4e89;
+  font-size: 26px;
+}
+
+.encabezado p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.campo {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 14px;
+}
+
+.obligatorio {
+  color: #d33;
+}
+
+.campo input {
+  padding: 10px 12px;
+  border: 2px solid #cdd6e0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: #1d4e89;
+}
+
+/* Estado válido / inválido */
+.campo input.valido {
+  border-color: #2e9e5b;
+  background-color: #f3fbf6;
+}
+
+.campo input.invalido {
+  border-color: #d33;
+  background-color: #fdf2f2;
+}
+
+.ayuda {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+}
+
+.contador {
+  font-size: 12px;
+  color: #888;
+}
+
+.error {
+  color: #d33;
+  font-size: 12.5px;
+  min-height: 16px;
+  margin-top: 4px;
+  display: block;
+}
+
+.mensaje-general {
+  text-align: center;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.mensaje-general.exito {
+  background: #e6f7ec;
+  color: #1e7a3d;
+  border: 1px solid #b7e4c7;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.mensaje-general.fallo {
+  background: #fdecea;
+  color: #b3261e;
+  border: 1px solid #f3b8b4;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.15s ease, transform 0.05s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primario {
+  background: #1d4e89;
+  color: #fff;
+}
+
+.btn-primario:hover {
+  opacity: 0.9;
+}
+
+.btn-secundario {
+  background: #e2e6ea;
+  color: #333;
+}
+
+.btn-secundario:hover {
+  opacity: 0.9;
+}
+
+.btn-terciario {
+  background: #f0f4fa;
+  color: #1d4e89;
+  border: 2px solid #1d4e89;
+}
+
+.btn-terciario:hover {
+  background: #1d4e89;
+  color: #fff;
+}
+
+/* Página de registros (tabla) */
+
+.contenedor-ancho {
+  max-width: 1000px;
+}
+
+.tabla-wrap {
+  overflow-x: auto;
+}
+
+table.tabla-registros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+table.tabla-registros th,
+table.tabla-registros td {
+  border: 1px solid #dde3ea;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+table.tabla-registros th {
+  background: #1d4e89;
+  color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+table.tabla-registros tr:nth-child(even) {
+  background: #f7f9fc;
+}
+
+table.tabla-registros tr:hover {
+  background: #eef4fb;
+}
+
+.btn-eliminar {
+  background: #d33;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  opacity: 0.85;
+}
+
+.sin-datos {
+  text-align: center;
+  color: #888;
+  padding: 30px 10px;
+  font-style: italic;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.contador-registros {
+  font-size: 14px;
+  color: #444;
+  background: #eef4fb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
