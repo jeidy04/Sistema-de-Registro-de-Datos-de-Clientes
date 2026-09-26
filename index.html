@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Clientes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <header class="encabezado">
+      <h1>Registro de Clientes</h1>
+      <p>Complete el formulario con los datos del cliente</p>
+    </header>
+
+    <form id="formCliente" novalidate>
+
+      <div class="campo">
+        <label for="cedula">Cédula <span class="obligatorio">*</span></label>
+        <input type="text" id="cedula" name="cedula" maxlength="10"
+               inputmode="numeric" autocomplete="off"
+               placeholder="Ej: 1312345678">
+        <div class="ayuda">
+          <span class="contador"><span id="contCedula">0</span>/10</span>
+        </div>
+        <span class="error" id="errorCedula"></span>
+      </div>
+
+      <div class="campo">
+        <label for="nombre">Nombre completo <span class="obligatorio">*</span></label>
+        <input type="text" id="nombre" name="nombre" maxlength="30"
+               autocomplete="off" placeholder="Ej: Juan Jose Pérez">
+        <div class="ayuda">
+          <span class="contador"><span id="contNombre">0</span>/30</span>
+        </div>
+        <span class="error" id="errorNombre"></span>
+      </div>
+
+      <div class="campo">
+        <label for="direccion">Dirección <span class="obligatorio">*</span></label>
+        <input type="text" id="direccion" name="direccion" maxlength="50"
+               autocomplete="off" placeholder="Ej: Av. Principal 123 y Secundaria">
+        <div class="ayuda">
+          <span class="contador"><span id="contDireccion">0</span>/50</span>
+        </div>
+        <span class="error" id="errorDireccion"></span>
+      </div>
+
+      <div class="campo">
+        <label for="telefono">Teléfono celular <span class="obligatorio">*</span></label>
+        <input type="text" id="telefono" name="telefono" maxlength="10"
+               inputmode="numeric" autocomplete="off" placeholder="Ej: 0991234567">
+        <div class="ayuda">
+          <span class="contador"><span id="contTelefono">0</span>/10</span>
+        </div>
+        <span class="error" id="errorTelefono"></span>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
+        <input type="text" id="correo" name="correo" maxlength="60"
+               autocomplete="off" placeholder="Ej: correo@dominio.com">
+        <span class="error" id="errorCorreo"></span>
+      </div>
+
+      <div class="mensaje-general" id="mensajeGeneral"></div>
+
+      <div class="botones">
+        <button type="submit" id="btnGuardar" class="btn btn-primario">Guardar cliente</button>
+        <button type="reset" class="btn btn-secundario" id="btnLimpiar">Limpiar</button>
+        <a href="registros.html" class="btn btn-terciario">Ver registros ingresados</a>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
