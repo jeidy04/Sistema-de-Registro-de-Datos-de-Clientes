@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clientes Registrados</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="contenedor contenedor-ancho">
+    <header class="encabezado">
+      <h1>Clientes Registrados</h1>
+      <p>Listado de todos los clientes ingresados en el sistema</p>
+    </header>
+
+    <div class="barra-superior">
+      <span class="contador-registros" id="contadorRegistros">0 clientes</span>
+      <div class="botones" style="margin:0;">
+        <a href="index.html" class="btn btn-terciario">Ingresar nuevo cliente</a>
+        <button id="btnVaciar" class="btn btn-secundario">Eliminar todos</button>
+      </div>
+    </div>
+
+    <div class="tabla-wrap">
+      <table class="tabla-registros">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo electrónico</th>
+            <th>Fecha registro</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+          <!-- Filas generadas dinámicamente por registros.js -->
+        </tbody>
+      </table>
+      <p class="sin-datos" id="sinDatos" style="display:none;">
+        Aún no se han registrado clientes.
+      </p>
+    </div>
+  </div>
+
+  <script src="registros.js"></script>
+</body>
+</html>
